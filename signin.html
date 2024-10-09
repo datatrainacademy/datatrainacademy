@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Academy - Sign In</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f7f7f7; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            background-color: #333; /* Dark header */
+            color: white; 
+            padding: 20px 0; 
+            text-align: center; 
+        }
+        nav { 
+            background-color: #444; /* Darker navigation background */
+            padding: 10px 20px; 
+            text-align: right; /* Align navigation to the right */
+        }
+        nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            transition: color 0.3s; /* Transition effect for hover */
+        }
+        nav a:hover {
+            color: #007BFF; /* Change color on hover */
+        }
+        section { 
+            display: flex; /* Enable Flexbox */
+            justify-content: center; /* Center the content */
+            padding: 20px; 
+            max-width: 800px; /* Limit max width for better alignment */
+            margin: 0 auto; /* Center the section */
+        }
+        footer { 
+            background-color: #333; 
+            color: white; 
+            padding: 10px 0; 
+            text-align: center; 
+            margin-top: 20px; 
+        }
+        form { 
+            margin: 20px auto; 
+            max-width: 400px; 
+            text-align: left; 
+            padding: 20px; /* Add some padding for better appearance */
+            border: 1px solid #ccc; /* Optional border */
+            border-radius: 5px; /* Optional rounded corners */
+            background-color: white; /* Optional background color */
+        }
+        input[type="text"], input[type="email"], input[type="password"] { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; /* Add border for inputs */
+            border-radius: 4px; /* Add rounded corners */
+        }
+        button { 
+            padding: 10px 20px; 
+            background-color: #007BFF; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 4px; /* Optional rounded corners */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .small-button {
+            padding: 5px 10px; /* Smaller padding */
+            font-size: 14px; /* Smaller font size */
+        }
+        .login-container {
+            text-align: left; /* Align text to the left */
+        }
+        .signup-button-container {
+            text-align: center; /* Center the signup button */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign In</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="signin.html">Sign In</a>
+    </nav>
+    
+    <section>
+        <div class="login-container">
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="signup-button-container">
+        <h2>Don't have an account?</h2>
+        <button class="small-button" onclick="location.href='signup.html'">Go to Sign Up Page</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 DataTrain Academy</p>
+        <p>Contact: mypractac@gmail.com</p>
+    </footer>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Logged in successfully!');
+        });
+    </script>
+</body>
+</html>
